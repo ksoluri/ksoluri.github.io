@@ -1,0 +1,159 @@
+/* thought.css — /thought-of-the-day page */
+
+/* Nav highlight for Thought link */
+.nav-thought {
+  color: var(--c-accent-light) !important;
+  font-style: italic;
+}
+
+/* Page header — quieter, more intimate than other pages */
+.thought-header {
+  background: var(--c-ink-900);
+  padding: var(--space-xl) 0 var(--space-lg);
+  border-bottom: 1px solid var(--c-ink-700);
+}
+.thought-header-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-xl);
+}
+.thought-eyebrow { color: var(--c-ink-400); margin-bottom: var(--space-sm); display: block; }
+.thought-title {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: var(--c-parchment-100);
+  font-style: italic;
+  margin-bottom: var(--space-sm);
+}
+.thought-subtitle {
+  color: var(--c-ink-300);
+  font-size: 0.95rem;
+  max-width: 520px;
+  line-height: 1.65;
+}
+.thought-subtitle a { color: var(--c-terrain-water); }
+
+/* Compass rose decoration */
+.compass-rose {
+  width: 90px;
+  flex-shrink: 0;
+  opacity: 0.6;
+  margin-top: var(--space-sm);
+}
+
+/* --- Main layout -------------------------------------------- */
+.thought-layout {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+/* --- The Thought card — centrepiece ------------------------- */
+.thought-main { max-width: 680px; }
+
+.thought-card {
+  background: var(--c-parchment-100);
+  border: var(--border-medium);
+  border-left: 3px solid var(--c-accent);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  padding: var(--space-xl);
+}
+.thought-card-label { display: block; margin-bottom: var(--space-md); }
+
+.thought-quote {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+  font-style: italic;
+  color: var(--c-ink-700);
+  line-height: 1.5;
+  margin: 0 0 var(--space-sm);
+  border: none;
+  padding: 0;
+}
+.thought-attribution {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--c-ink-400);
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-lg);
+}
+.thought-reflection {
+  font-size: 0.95rem;
+  color: var(--c-ink-500);
+  line-height: 1.75;
+  border-top: var(--border-subtle);
+  padding-top: var(--space-lg);
+  margin: 0;
+}
+
+/* --- Now grid ----------------------------------------------- */
+.now-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-md);
+}
+
+.now-card {
+  background: var(--c-parchment-100);
+  border: var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
+.now-card--location {
+  border-style: dashed;
+  border-color: var(--c-parchment-400);
+  background: var(--c-parchment-50);
+}
+
+.now-card-label { display: block; margin-bottom: var(--space-md); }
+
+.now-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+.now-list li { display: flex; flex-direction: column; gap: 2px; }
+
+.now-item-title {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--c-ink-700);
+  font-family: var(--font-display);
+}
+.now-item-desc {
+  font-size: 0.82rem;
+  color: var(--c-ink-500);
+  line-height: 1.55;
+}
+
+/* Location card */
+.location-line {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xs);
+}
+.location-text {
+  font-size: 0.88rem;
+  color: var(--c-ink-600);
+  font-family: var(--font-display);
+  font-style: italic;
+}
+
+/* Archive link */
+.thought-archive-link { max-width: 640px; }
+.thought-archive-link .text-eyebrow {
+  line-height: 1.8;
+  color: var(--c-ink-400);
+}
+.thought-archive-link a { color: var(--c-link); }
+
+/* Responsive */
+@media (max-width: 640px) {
+  .thought-header-inner { flex-direction: column; }
+  .compass-rose { display: none; }
+  .thought-card { padding: var(--space-lg); }
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Collaborate with Kelly Soluri — research partnerships, freelance mapping, and data consulting.">
+  <title>Collaborate — Kelly Soluri</title>
+  <link rel="stylesheet" href="../assets/css/palette.css">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/collab.css">
+</head>
+<body>
+
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a href="../index.html" class="nav-logo">Kelly Soluri</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="maps.html">Maps</a></li>
+          <li><a href="papers.html">Papers</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="collab.html" class="nav-cta" aria-current="page">Collaborate</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <p class="text-eyebrow" style="color: var(--c-ink-400); margin-bottom: 8px;">Let's work together</p>
+        <h1>Collaboration</h1>
+        <p>I'm open to research partnerships, freelance mapping work, and data consulting. Read below and reach out.</p>
+      </div>
+    </div>
+
+    <div class="container collab-layout">
+
+      <!-- What I offer -->
+      <section class="collab-offers">
+        <p class="text-eyebrow collab-section-label">What I offer</p>
+
+        <div class="offer-grid">
+
+          <div class="offer-card">
+            <div class="offer-icon">
+              <svg viewBox="0 0 32 32" fill="none" width="28" height="28">
+                <rect x="2" y="6" width="28" height="20" rx="3" stroke="var(--c-terrain-water)" stroke-width="1.5"/>
+                <line x1="2" y1="13" x2="30" y2="13" stroke="var(--c-terrain-water)" stroke-width="0.8" opacity="0.5"/>
+                <circle cx="10" cy="19" r="3" fill="var(--c-terrain-water)" opacity="0.6"/>
+                <circle cx="20" cy="16" r="3" fill="var(--c-terrain-forest)" opacity="0.6"/>
+              </svg>
+            </div>
+            <h3 class="offer-title">Research collaboration</h3>
+            <p class="offer-desc">Co-authorship, data sharing, and joint grant applications. Especially interested in [your topic areas]. Happy to discuss project fit over a short call.</p>
+          </div>
+
+          <div class="offer-card">
+            <div class="offer-icon">
+              <svg viewBox="0 0 32 32" fill="none" width="28" height="28">
+                <path d="M4 28 L4 8 Q16 2 28 8 L28 28 Q16 22 4 28Z" stroke="var(--c-terrain-lowland)" stroke-width="1.5" fill="none"/>
+                <line x1="4" y1="18" x2="28" y2="18" stroke="var(--c-terrain-lowland)" stroke-width="0.6" opacity="0.5"/>
+                <circle cx="12" cy="13" r="2.5" fill="var(--c-terrain-highland)" opacity="0.8"/>
+                <circle cx="20" cy="22" r="2.5" fill="var(--c-terrain-highland)" opacity="0.8"/>
+              </svg>
+            </div>
+            <h3 class="offer-title">Freelance mapping</h3>
+            <p class="offer-desc">Custom maps for academic publications, NGO reports, journalism, or public communication. I work in QGIS, Python, and Leaflet.js.</p>
+          </div>
+
+          <div class="offer-card">
+            <div class="offer-icon">
+              <svg viewBox="0 0 32 32" fill="none" width="28" height="28">
+                <rect x="3" y="3" width="12" height="12" rx="2" stroke="var(--c-terrain-forest)" stroke-width="1.5" fill="none"/>
+                <rect x="17" y="3" width="12" height="12" rx="2" stroke="var(--c-terrain-forest)" stroke-width="1.5" fill="none"/>
+                <rect x="3" y="17" width="12" height="12" rx="2" stroke="var(--c-terrain-forest)" stroke-width="1.5" fill="none"/>
+                <rect x="17" y="17" width="12" height="12" rx="2" stroke="var(--c-ink-400)" stroke-width="1" fill="none" stroke-dasharray="2 2"/>
+              </svg>
+            </div>
+            <h3 class="offer-title">Data consulting</h3>
+            <p class="offer-desc">Geospatial data processing, analysis pipelines, and reproducible workflows in Python and R. Short-term and project-based engagements.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <hr class="divider">
+
+      <!-- Contact form -->
+      <section class="contact-section">
+        <p class="text-eyebrow collab-section-label">Get in touch</p>
+        <p class="contact-intro">Send me a note below or email directly at <a href="mailto:kellysoluri@gmail.com">kellysoluri@gmail.com</a>. I respond within a few days.</p>
+
+        <form class="contact-form" action="https://formspree.io/f/mvzwnwob" method="POST">
+
+          <div class="form-row form-row--two">
+            <div class="form-group">
+              <label class="form-label" for="name">Name</label>
+              <input class="form-input" type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input class="form-input" type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="type">Type of inquiry</label>
+            <select class="form-input" id="type" name="type">
+              <option value="">Select one</option>
+              <option value="research">Research collaboration</option>
+              <option value="mapping">Freelance mapping</option>
+              <option value="consulting">Data consulting</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="message">Message</label>
+            <textarea class="form-input form-textarea" id="message" name="message" rows="5" placeholder="Tell me about your project or question…" required></textarea>
+          </div>
+
+          <button class="btn btn-primary" type="submit">Send message</button>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-name">Kelly Soluri</span>
+      <nav class="footer-links">
+        <a href="https://github.com/ksoluri" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/kelly-soluri/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:kellysoluri@gmail.com">Email</a>
+      </nav>
+      <span class="footer-copy">&copy; 2026 Kelly Soluri</span>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kelly Soluri — thought of the day. What I'm reading, thinking, and working on right now.">
+  <title>Thought of the day — Kelly Soluri</title>
+  <link rel="stylesheet" href="../assets/css/palette.css">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/thought.css">
+</head>
+<body>
+
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a href="../index.html" class="nav-logo">Kelly Soluri</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="maps.html">Maps</a></li>
+          <li><a href="papers.html">Papers</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="thought.html" aria-current="page" class="nav-thought">Thought</a></li>
+          <li><a href="collab.html" class="nav-cta">Collaborate</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero — deliberately quieter than other pages -->
+    <div class="thought-header">
+      <div class="container">
+        <div class="thought-header-inner">
+          <div>
+            <p class="text-eyebrow thought-eyebrow">Updated <span id="last-updated">March 2026</span></p>
+            <h1 class="thought-title">Thought of the day</h1>
+            <p class="thought-subtitle">
+              A snapshot of what I'm thinking about, reading, working on, and noticing.
+              Not a blog post — just a living note to myself (and you).
+              Inspired by <a href="https://nownownow.com" target="_blank" rel="noopener">/now pages</a>.
+            </p>
+          </div>
+          <!-- Decorative compass rose -->
+          <svg class="compass-rose" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+            <circle cx="50" cy="50" r="46" stroke="var(--c-parchment-400)" stroke-width="0.8"/>
+            <circle cx="50" cy="50" r="36" stroke="var(--c-parchment-400)" stroke-width="0.4"/>
+            <circle cx="50" cy="50" r="4"  fill="var(--c-ink-500)"/>
+            <!-- Cardinal points -->
+            <polygon points="50,4 53,46 50,50 47,46"  fill="var(--c-ink-600)"/>
+            <polygon points="50,96 53,54 50,50 47,54" fill="var(--c-parchment-400)"/>
+            <polygon points="4,50 46,47 50,50 46,53"  fill="var(--c-parchment-400)"/>
+            <polygon points="96,50 54,47 50,50 54,53" fill="var(--c-parchment-400)"/>
+            <!-- Intercardinal ticks -->
+            <line x1="50" y1="8"  x2="50" y2="14" stroke="var(--c-parchment-400)" stroke-width="0.6" transform="rotate(45 50 50)"/>
+            <line x1="50" y1="8"  x2="50" y2="14" stroke="var(--c-parchment-400)" stroke-width="0.6" transform="rotate(135 50 50)"/>
+            <line x1="50" y1="8"  x2="50" y2="14" stroke="var(--c-parchment-400)" stroke-width="0.6" transform="rotate(225 50 50)"/>
+            <line x1="50" y1="8"  x2="50" y2="14" stroke="var(--c-parchment-400)" stroke-width="0.6" transform="rotate(315 50 50)"/>
+            <!-- N label -->
+            <text x="50" y="2" text-anchor="middle" font-family="var(--font-mono)" font-size="8" fill="var(--c-ink-500)" dominant-baseline="auto">N</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="container thought-layout">
+
+      <!-- THE THOUGHT — the centrepiece -->
+      <section class="thought-main">
+        <div class="thought-card">
+          <span class="text-eyebrow thought-card-label">Today's thought</span>
+          <blockquote class="thought-quote">
+            "Write your thought of the day here. It can be a quote you're sitting with,
+            an observation from the field, a question you can't stop turning over,
+            or something small you noticed on a walk."
+          </blockquote>
+          <p class="thought-attribution">— Source or context, if any</p>
+          <p class="thought-reflection">
+            A short paragraph of your own reflection on this thought. Why does it matter to you
+            right now? What does it connect to in your work or life? This is the informal,
+            unpolished version — the kind of thing you'd say to a colleague over coffee.
+          </p>
+        </div>
+      </section>
+
+      <!-- NOW GRID — snapshot sections -->
+      <section class="now-grid">
+
+        <div class="now-card">
+          <span class="text-eyebrow now-card-label">Working on</span>
+          <ul class="now-list">
+            <li>
+              <span class="now-item-title">Research project name</span>
+              <span class="now-item-desc">One sentence on where this stands right now and what's occupying your attention.</span>
+            </li>
+            <li>
+              <span class="now-item-title">A QGIS plugin / script / tool</span>
+              <span class="now-item-desc">What you're building, debugging, or refactoring this week.</span>
+            </li>
+            <li>
+              <span class="now-item-title">This website</span>
+              <span class="now-item-desc">Slowly building it out. Adding the thought of the day page felt right.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="now-card">
+          <span class="text-eyebrow now-card-label">Reading</span>
+          <ul class="now-list">
+            <li>
+              <span class="now-item-title">Book or paper title</span>
+              <span class="now-item-desc">Author · A note on why you picked it up and what you think so far.</span>
+            </li>
+            <li>
+              <span class="now-item-title">Another book or article</span>
+              <span class="now-item-desc">A line on where you are in it and what's sticking.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="now-card">
+          <span class="text-eyebrow now-card-label">Noticing</span>
+          <ul class="now-list">
+            <li>
+              <span class="now-item-title">Something from the field or city</span>
+              <span class="now-item-desc">An observation — a pattern in the landscape, a map that surprised you, something worth pointing at.</span>
+            </li>
+            <li>
+              <span class="now-item-title">A tool or technique</span>
+              <span class="now-item-desc">Something new you tried, a workflow that clicked, or a method you're rethinking.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="now-card">
+          <span class="text-eyebrow now-card-label">Listening to</span>
+          <ul class="now-list">
+            <li>
+              <span class="now-item-title">Podcast / album / playlist</span>
+              <span class="now-item-desc">What's on while you're working, commuting, or in the field.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="now-card">
+          <span class="text-eyebrow now-card-label">Asking myself</span>
+          <ul class="now-list">
+            <li>
+              <span class="now-item-desc" style="font-style: italic; color: var(--c-ink-500);">
+                "A question you're sitting with — something unresolved, something you're 
+                turning over in your research or life. No answer required."
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="now-card now-card--location">
+          <span class="text-eyebrow now-card-label">Where I am</span>
+          <div class="location-line">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <circle cx="7" cy="6" r="3" stroke="var(--c-accent)" stroke-width="1.2"/>
+              <path d="M7 14 C7 14 2 9.5 2 6a5 5 0 0 1 10 0c0 3.5-5 8-5 8Z" stroke="var(--c-accent)" stroke-width="1.2" fill="none"/>
+            </svg>
+            <span class="location-text">Washington, DC — or wherever fieldwork takes me</span>
+          </div>
+          <p class="now-item-desc" style="margin-top: 8px;">
+            A sentence on where you physically are right now — city, field site, 
+            conference — and what that context feels like.
+          </p>
+        </div>
+
+      </section>
+
+      <!-- Archive link -->
+      <div class="thought-archive-link">
+        <hr class="divider">
+        <p class="text-eyebrow">
+          This page updates whenever something shifts. Last updated: <span id="updated-footer">March 21, 2026</span>.
+          <br>Want a history of past thoughts? <a href="thought-archive.html">Browse the archive →</a>
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-name">Kelly Soluri</span>
+      <nav class="footer-links">
+        <a href="https://github.com/ksoluri" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/kelly-soluri/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:kellysoluri@gmail.com">Email</a>
+      </nav>
+      <span class="footer-copy">&copy; 2026 Kelly Soluri</span>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+/* =============================================================
+   Kelly Soluri — Cartographic Palette
+   Design system: earthy, parchment-toned, map-inspired
+   ============================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* --- Core color tokens ---------------------------------------- */
+:root {
+  /* Parchment backgrounds */
+  --c-parchment-50:  #faf8f2;   /* lightest — page background */
+  --c-parchment-100: #f5f1e8;   /* surface cards */
+  --c-parchment-200: #ede8da;   /* hover states, inset panels */
+  --c-parchment-300: #e0d8c8;   /* borders, dividers */
+  --c-parchment-400: #c9bfa8;   /* muted borders, accents */
+
+  /* Map ink / dark tones */
+  --c-ink-900: #1e1610;         /* richest dark — hero bg */
+  --c-ink-800: #2c2416;         /* nav, footer */
+  --c-ink-700: #3d3320;         /* headings */
+  --c-ink-600: #5a4a32;         /* body text */
+  --c-ink-500: #7a6548;         /* secondary text */
+  --c-ink-400: #8c7c5e;         /* muted text, metadata */
+  --c-ink-300: #a89880;         /* very muted / placeholders */
+
+  /* Terrain accent colors */
+  --c-terrain-water:   #6a9fb5; /* water bodies — blue-teal */
+  --c-terrain-forest:  #7a9e6b; /* forest — muted sage green */
+  --c-terrain-lowland: #c9b97a; /* lowland — warm ochre */
+  --c-terrain-highland:#a0856c; /* highland — dusty rose-brown */
+  --c-terrain-contour: #b8a88a; /* contour lines */
+
+  /* Semantic / functional */
+  --c-link:    #4a7a8a;         /* links — map water hue */
+  --c-link-hover: #2c5f6e;
+  --c-accent:  #8c5e3c;         /* call-to-action, highlights */
+  --c-accent-light: #c9895a;
+
+  /* --- Typography -------------------------------------------- */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'Source Serif 4', Georgia, serif;
+  --font-mono:    'JetBrains Mono', 'Courier New', monospace;
+
+  /* --- Spacing ----------------------------------------------- */
+  --space-xs:  4px;
+  --space-sm:  8px;
+  --space-md:  16px;
+  --space-lg:  24px;
+  --space-xl:  40px;
+  --space-2xl: 64px;
+
+  /* --- Borders & Radius -------------------------------------- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --border-subtle:  0.5px solid var(--c-parchment-400);
+  --border-medium:  1px   solid var(--c-parchment-400);
+  --border-strong:  1.5px solid var(--c-ink-500);
+
+  /* --- Transitions ------------------------------------------- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration: 200ms;
+}
+
+/* --- Base resets ---------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: var(--c-parchment-50);
+  color: var(--c-ink-600);
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* --- Typography scale ---------------------------------------- */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--c-ink-700);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3rem); }
+h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); }
+h3 { font-size: 1.2rem; }
+h4 { font-size: 1rem; }
+
+p { margin-bottom: 1em; }
+p:last-child { margin-bottom: 0; }
+
+a {
+  color: var(--c-link);
+  text-decoration: underline;
+  text-decoration-color: var(--c-parchment-400);
+  text-underline-offset: 3px;
+  transition: color var(--duration) var(--ease-out),
+              text-decoration-color var(--duration) var(--ease-out);
+}
+a:hover {
+  color: var(--c-link-hover);
+  text-decoration-color: var(--c-link-hover);
+}
+
+code, pre {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+}
+
+/* --- Utility classes ----------------------------------------- */
+.text-muted    { color: var(--c-ink-400); }
+.text-small    { font-size: 0.8rem; }
+.text-eyebrow  {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  color: var(--c-ink-400);
+  text-transform: uppercase;
+}
+.divider {
+  border: none;
+  border-top: var(--border-subtle);
+  margin: var(--space-lg) 0;
+}
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+.tag-pill {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: var(--border-subtle);
+  color: var(--c-ink-400);
+  background: var(--c-parchment-200);
+  letter-spacing: 0.04em;
+}

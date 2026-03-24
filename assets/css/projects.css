@@ -1,0 +1,83 @@
+/* projects.css */
+.projects-layout { padding-top: var(--space-xl); padding-bottom: var(--space-2xl); }
+
+.proj-section { margin-bottom: var(--space-xl); }
+.proj-section-title { margin-bottom: var(--space-sm); }
+.proj-section-sub { font-size: 0.9rem; color: var(--c-ink-500); margin-bottom: var(--space-lg); }
+
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.proj-card {
+  background: var(--c-parchment-100);
+  border: var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  transition: background var(--duration), border-color var(--duration), transform var(--duration);
+}
+.proj-card:hover {
+  background: var(--c-parchment-200);
+  border-color: var(--c-parchment-400);
+  transform: translateY(-2px);
+}
+.proj-card--personal {
+  border-left: 3px solid var(--c-terrain-contour);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+}
+
+.proj-card-top {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xs);
+}
+.proj-lang-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.proj-lang-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--c-ink-400);
+  letter-spacing: 0.05em;
+  flex: 1;
+}
+.proj-github-link {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--c-accent);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+.proj-github-link:hover { color: var(--c-accent-light); text-decoration: none; }
+
+.proj-title {
+  font-size: 1rem;
+  color: var(--c-ink-700);
+  margin-bottom: var(--space-xs);
+}
+.proj-desc {
+  font-size: 0.85rem;
+  color: var(--c-ink-500);
+  line-height: 1.55;
+  flex: 1;
+}
+.proj-tags { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
+.proj-link {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--c-accent);
+  text-decoration: none;
+  margin-top: auto;
+  padding-top: var(--space-sm);
+}
+.proj-link:hover { color: var(--c-accent-light); }

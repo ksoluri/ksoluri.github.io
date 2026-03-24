@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kelly Soluri — scientific papers and publications.">
+  <title>Papers — Kelly Soluri</title>
+  <link rel="stylesheet" href="../assets/css/palette.css">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/papers.css">
+</head>
+<body>
+
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a href="../index.html" class="nav-logo">Kelly Soluri</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="maps.html">Maps</a></li>
+          <li><a href="papers.html" aria-current="page">Papers</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="collab.html" class="nav-cta">Collaborate</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="page-header">
+      <div class="container">
+        <p class="text-eyebrow" style="color: var(--c-ink-400); margin-bottom: 8px;">Publications</p>
+        <h1>Papers & research</h1>
+        <p>Peer-reviewed articles, conference proceedings, and preprints. All PDFs linked where open-access.</p>
+      </div>
+    </div>
+
+    <div class="container papers-layout">
+
+      <!-- Filter bar -->
+      <div class="filter-bar">
+        <span class="text-eyebrow">Filter by</span>
+        <div class="filter-pills">
+          <button class="filter-pill active" data-filter="all">All</button>
+          <button class="filter-pill" data-filter="journal">Journal</button>
+          <button class="filter-pill" data-filter="conference">Conference</button>
+          <button class="filter-pill" data-filter="preprint">Preprint</button>
+        </div>
+      </div>
+
+      <!-- Year group -->
+      <section class="year-group" data-year="2024">
+        <h2 class="year-label">2024</h2>
+
+        <article class="paper-card" data-type="journal">
+          <div class="paper-number">01</div>
+          <div class="paper-body">
+            <div class="paper-badges">
+              <span class="paper-badge badge--journal">Journal article</span>
+            </div>
+            <h3 class="paper-title">
+              <a href="#">Spatial patterns of X across Y: a multi-scale analysis</a>
+            </h3>
+            <p class="paper-authors">Soluri, K., Co-author A., Co-author B.</p>
+            <p class="paper-journal"><em>Journal of [Field]</em>, Vol. 12, Issue 3, pp. 45–67</p>
+            <p class="paper-abstract">
+              A brief 1–2 sentence abstract or teaser goes here. Describe what problem 
+              the paper addresses and why the finding matters. Keep it accessible to 
+              non-specialists.
+            </p>
+            <div class="paper-links">
+              <a href="#" class="paper-link">PDF</a>
+              <a href="#" class="paper-link">DOI</a>
+              <a href="#" class="paper-link">Data</a>
+              <a href="#" class="paper-link">Code</a>
+            </div>
+          </div>
+        </article>
+
+      </section>
+
+      <hr class="divider">
+
+      <section class="year-group" data-year="2023">
+        <h2 class="year-label">2023</h2>
+
+        <article class="paper-card" data-type="conference">
+          <div class="paper-number">02</div>
+          <div class="paper-body">
+            <div class="paper-badges">
+              <span class="paper-badge badge--conference">Conference paper</span>
+            </div>
+            <h3 class="paper-title">
+              <a href="#">A method for analyzing Z using remote sensing data</a>
+            </h3>
+            <p class="paper-authors">Soluri, K., Co-author C.</p>
+            <p class="paper-journal"><em>Proceedings of [Conference Name]</em>, City, Country</p>
+            <p class="paper-abstract">
+              Abstract or teaser for this conference paper. What did you present and 
+              what was the key contribution?
+            </p>
+            <div class="paper-links">
+              <a href="#" class="paper-link">PDF</a>
+              <a href="#" class="paper-link">Slides</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="paper-card" data-type="preprint">
+          <div class="paper-number">03</div>
+          <div class="paper-body">
+            <div class="paper-badges">
+              <span class="paper-badge badge--preprint">Preprint</span>
+            </div>
+            <h3 class="paper-title">
+              <a href="#">Temporal dynamics in field dataset: preliminary findings</a>
+            </h3>
+            <p class="paper-authors">Soluri, K.</p>
+            <p class="paper-journal">EarthArXiv · Posted November 2023</p>
+            <p class="paper-abstract">
+              Abstract for preprint. Note that this is under review if applicable.
+            </p>
+            <div class="paper-links">
+              <a href="#" class="paper-link">Preprint</a>
+              <a href="#" class="paper-link">Data</a>
+            </div>
+          </div>
+        </article>
+
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-name">Kelly Soluri</span>
+      <nav class="footer-links">
+        <a href="https://github.com/ksoluri" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/kelly-soluri/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:kellysoluri@gmail.com">Email</a>
+      </nav>
+      <span class="footer-copy">&copy; 2026 Kelly Soluri</span>
+    </div>
+  </footer>
+
+  <script>
+    /* Simple filter logic */
+    const pills = document.querySelectorAll('.filter-pill');
+    const papers = document.querySelectorAll('.paper-card');
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        pills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        const filter = pill.dataset.filter;
+        papers.forEach(paper => {
+          paper.style.display = (filter === 'all' || paper.dataset.type === filter) ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
